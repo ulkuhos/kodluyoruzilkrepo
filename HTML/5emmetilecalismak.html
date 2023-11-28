@@ -1,0 +1,249 @@
+<h2>Emmet / Zen Coding </h2>
+<!-- etiket isimlerini direkt verebiliyoruz
+    ! + Tab kullanarak  html iskeleti oluşturabiliriz
+    + kardes oge
+    > icinde oge
+    ^ yukari cik ve oge olustur
+    * carp kac tane istiyorsan aynısından -> p*3 gibi
+    lorem -> otomatik hazır metinler olusturur-uzun yazılar oluşturur.
+    lorem4 -> 4 kelimelik lorem üret demektir   
+    . nokta  class olusturmak icin
+    # id olusturmak icin
+
+    ***emmet örneklerine ve kısayollarına şuradan ulaşabiliriz: https://docs.emmet.io/cheat-sheet/ ve https://emmet.io/ 
+
+    ***lorem özelliğine şu siteden ulaşabiliriz https://www.lipsum.com/  
+    
+    ***Eğer emmet özelliği gelmiyorsa bunun iki nedeni var.
+        1.cisi sağ altta "HTML" yazmalı ki html dosyasında bu özelliği kullanıyor olalım.
+        2.cisi Sol tarafta eklentiler kısmında çok fazla eklenti oluyor ve kurulmuş olduğunda emmet bu eklentilerden ötürü sapıtabiliyor. Bu nedenle çok fazla ve gereksiz eklenti kullanmamak gerekiyor  -->
+
+<!-- h1+p+p+h2+p+p+p+p -->
+<h1> </h1>
+<p></p>
+<p></p>
+<h2></h2>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<!-- h1+p+p+h2+p+p+p+p -> kısaltmak icin: h1+p*2+h2+p*4 -->
+<h1></h1>
+<p></p>
+<p></p>
+<h2></h2>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<!-- ul>li*3 yapmak asagıdaki gibi yazmanı kısayolu -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<!-- ul>li+li+li şeklinde + kullanarak kardeş element eklemek de aynı işi görür -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<!-- h1+p yapinca asagidaki gibi gelir kisayolu -->
+<h1></h1>
+<p></p>
+
+<!--  ul>li*3>p>h3>p Bu örnek hatalı cünkü çok karmasık-->
+<!-- ul>li*3^p bu daha doğru bir kullanım çünkü üste çık paragrap olustur deriz yukarı işareti ile. örnek aşağıda -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+ </ul>
+ <p></p>
+
+ <!-- paragraf başlığın altında olamaz cünkü kardes elementlerdir +kullanmamız gerekir ör ul>li*3^p+h3 -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<p></p>
+<h3></h3>
+
+<!-- ul>li*3^p*2+h3 -->
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<p></p>
+<p></p>
+<h3></h3>
+
+<!-- p>lorem4 ->paragrafın içinde 4 kelimelik lorem hazır sahte yazı üret demek-->
+<p>Lorem ipsum dolor sit.</p>
+
+<!-- p>lorem :paragram içinde lorem uzun metin oluşturmak için kullanilir.-->
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, dolore. Mollitia quis quisquam quo, rerum sint dolorem at nulla atque quas, ad unde reiciendis! Quibusdam voluptatibus repudiandae earum officiis veniam?</p>
+
+<!-- ul>li*3>lorem1^p*2>lorem4+h3>lorem: yanlıs kullanım var alttaki gibi,çünkü h3 paragrafın altında olamaz aynı satırda olmalı ve bunun için ^yukarı işareti ile bir üste çıkması gerekir.  -->
+<ul>
+    <li>Lorem.</li>
+    <li>Fugit.</li>
+    <li>Neque.</li>
+    <p>
+        Lorem ipsum dolor sit.
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corporis ducimus beatae animi accusamus necessitatibus quo eum, voluptatem reprehenderit! Facere eveniet tempora incidunt, ipsum magni ratione repellat quo quidem deleniti.</h3>
+    </p>
+    <p>
+        Quos architecto fuga dicta!
+        <h3>Consectetur tempora officia inventore nam fugiat at quas atque laboriosam corporis quaerat obcaecati fugit illum, eius quibusdam dolor dolorum optio sint distinctio accusamus fuga eum sequi! Illum rem omnis laboriosam?</h3>
+    </p>
+</ul>
+
+<!-- Bu kullanım da yanlış çünkü bu sefer paragraf li nin altında başlıyor. Ul nin altında başlatmamız gerekiyor: ul>li*3>lorem1^p*2>lorem4^h3>lorem1 -->
+<ul>
+    <li>Lorem.</li>
+    <li>Possimus.</li>
+    <li>Consequatur!</li>
+    <p>Lorem ipsum dolor sit.</p>
+    <p>Omnis voluptatem iure natus.</p>
+    <h3>Lorem.</h3>
+</ul>
+
+<!-- Doğrusu: Ul nin altında başlatmamız gerekiyor ve iki tane yukarı işareti olmalı p nin önünde: ul>li*3>lorem1^^p*2>lorem4^h3>lorem1 -->
+<ul>
+    <li>Lorem.</li>
+    <li>Molestiae.</li>
+    <li>Modi.</li>
+</ul>
+<p>Lorem ipsum dolor sit.</p>
+<p>Explicabo a corporis ullam!</p>
+<h3>Lorem.</h3>
+
+<!-- h3.deneme: yazıp taba basınca h3 te class özelliği ile birlikte deneme geldi -->
+<h3 class="deneme"></h3>
+
+<!-- h3 .deneme: h3 ten sonra bir boşluk bırakıp nokta yazıp taba basınca h3 ten sonra bir div yapısı class özelliği ile birlikte deneme geldi -->
+h3 <div class="deneme"></div>
+
+<!-- h3.deneme>lorem1 -->
+<h3 class="deneme">Lorem.</h3> 
+
+<!-- h3#idolussun>lorem1 : nokta yerine diyez kullanılınca id oluşur-->
+<h3 id="idolussun">Lorem.</h3>
+
+<!-- ul#id1>li#id2: ul ve li içinde id oluşturur -->
+<ul id="id1">
+    <li id="id2"></li>
+</ul>
+
+<!-- hem class hem de id oluşturmak için hem de yazı oluştmak için: h3.deneme#idolussun>lorem1 -->
+<h3 class="deneme" id="idolussun">Lorem.</h3>
+
+<!-- ul>li#id1+li#id2+li#id3 :farklı id’lere sahip üç adet li tagı oluşturmak için -->
+<ul>
+    <li id="id1"></li>
+    <li id="id2"></li>
+    <li id="id3"></li>
+</ul>
+
+<!-- ul>li#id1+li#id2+li#id3 şeklinde yazdığımız kod bloğunu çok daha basit bir biçimde ul>li#idNo$*3 diyerek yazabiliriz. 
+$: dolar işareti -->
+<ul>
+    <li id="idNo1"></li>
+    <li id="idNo2"></li>
+    <li id="idNo3"></li>
+</ul>
+
+<!-- ul>li#idNo*3: yazınca da aynısını yapar -->
+<ul>
+    <li id="idNo"></li>
+    <li id="idNo"></li>
+    <li id="idNo"></li>
+</ul>
+
+<!-- Birden fazla class kullanmak için nokta ile yaparız ve boşluk bırakmayız: h3.birinci-class.ikinci-class -->
+<h3 class="birinci-class ikinci-class"></h3>
+
+<!-- h3.kodluyoruz.html : seklinde hem kodluyoruz hem de html isimliiki class olusturduk -->
+<h3 class="kodluyoruz html"></h3>
+
+<!-- h4 yazıp tab tuşuna basınca otomatik aşağıdaki gibi paragraf oluşur. -->
+<h4></h4>
+
+<!-- ".tepki" yazıp tab tuşuna basınca div içinde bir class oluşturur. Div etiketi oluşturur.-->
+<div class="tepki"></div>
+
+ <!-- ul>li.tepki: ul içinde li içinde tepki diye bir class oluşturur -->
+ <ul>
+    <li class="tepki"></li>
+ </ul>
+
+<!-- ul>.tepki: otomatik olarak div mi oluşturmk isteriz noktayla? hayır li içinde class olduğunu anlar otomatik olarak -->
+<ul>
+    <li class="tepki"></li>
+</ul>
+
+<!-- ul>.tepki*3: 3 tane tepki isimli classların(elementlerin) olduğu li etiketleri oluşur. -->
+<ul>
+    <li class="tepki"></li>
+    <li class="tepki"></li>
+    <li class="tepki"></li>
+</ul>
+
+<!-- ul>.list-red*3: 3 tane list red isimli class elementi olacak ve alt alta li özelliğinde olacak -->
+<ul>
+    <li class="list-red"></li>
+    <li class="list-red"></li>
+    <li class="list-red"></li>
+</ul>
+
+<!-- ul.class1>li.class2: ul içinde ve li içinde class oluşturur -->
+<ul class="class1">
+    <li class="class2"></li>
+</ul>
+
+<!-- li.className yazıp Tab’a bastığımızda:className class’ına ait bir li tagı oluşur. -->
+<li class="className"></li>
+
+<!-- .className yazdıktan sonra Tab’a basarsak: bir div tagı yani etiketi oluştur.-->
+<div class="className"></div>
+
+<!-- #className -->
+<div id="className"></div>
+
+<!-- Emmet’e bir tag vermeksizin . veya # ifadelerini kullandığımızda bunun div tagı olduğunu biliyor. #className ve .className aynı sonucu verir-->
+
+<!--  ul>.className yazıp Tab’a bastığımızda ise bunun ul tagı içinde li elementi olduğunu algılıyor.  -->
+<ul>
+    <li class="className"></li>
+</ul>
+
+<!-- .li.item*4: linin başına . koyduğumuz için onu da div olarak algılar. nokta olmasaydı div değil li etiketi olarak açacaktı -->
+<div class="li item"></div>
+<div class="li item"></div>
+<div class="li item"></div>
+<div class="li item"></div>
+
+<!-- ul tagı altında "item1 ,item2, item3, item4" classlarına sahip 4 adet "li" tagı oluşturmak istersek aşağıdakilerden hangisini yapmalıyız? : ul>li.item$*4-->
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+</ul>
+
+<!-- div tagı altında "item" id'sine sahip 10 kelimelik loremleri içeren 6 adet p tagı oluşturmak istersek aşağıdakilerden hangisini yapmalıyız? : div>p#item*6>lorem10 -->
+<div>
+    <p id="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, voluptate?</p>
+    <p id="item">Nihil atque natus ducimus consectetur deserunt quo tempore ullam iure.</p>
+    <p id="item">Blanditiis dignissimos, placeat autem exercitationem sapiente officia qui deleniti incidunt.</p>
+    <p id="item">Aspernatur molestias cupiditate voluptatum nihil. Amet ipsum odit tenetur minima?</p>
+    <p id="item">Saepe laboriosam iusto voluptate quasi quibusdam aliquam aperiam animi dolore!</p>
+    <p id="item">Laborum, fugit quidem voluptate molestiae magnam eius necessitatibus quo nihil!</p>
+</div>

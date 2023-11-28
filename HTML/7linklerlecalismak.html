@@ -1,0 +1,125 @@
+<h2>Linklerle Calismak</h2>
+<!-- Alt kısımdaki linke tıklayınca buraya gelmesini sağlama kodu -->
+<h4 id="#ustegel">Üst Kısım</h4>
+
+<!-- a hrefi nasıl  kullanacağımızı anlatan bir site a etiketi üzerine tıkladığımızda MDN gelince ona tıklarsak bizi yönlendirir.ör:a href kullanımları linki: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
+ör:a href kullanımları:web site-mail ve telefon olarak
+<p>You can reach Michael at:</p>
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul> 
+-->
+
+
+
+<!-- 
+    1-başka bir web sitesine git
+    2-başka bir sayfaya gidebiliriz
+    3-ayni sayfa icinde bir yere gidebiliriz? ID->Bilgisine git
+    4-mail at
+    5-telefon et
+    6-resme link ver
+    href="" : bu yukardaki bilgileri href içerisine yazarız link özelliği verir.
+    a etiketi içerisinde href özelliği gelir. <a href=""></a>
+    p etiketi paragraf ile de href özelliği kullanılabilir <p href="">
+    buraya gidilecek </p> 
+-->
+
+<!-- a etiketi üstüne gelince MDN Reference diye bir yazı çıkar. Bu yazıya tıklayınca bu etiketin kullanımı için kaynak sitesine yönlendirebilir. Burada farklı özellik kullanımlarını da görürüz.Bunu diğer etiketler için de yapabiliriz -->
+
+
+<!-- ul>li*3: dersem ul içinde 3 tane li olacak ve her birinde href link özelliği olacak çalışmaları ekleyebiliriz. -->
+<ul>
+    <li><!--1-başka bir web sitesine gitmek için -->
+         <a href="http://kodluyoruz.org">
+            kodluyoruz sayfasina gidilecek
+         </a><br><!--br bir alt satıra geçer, boşluk bırakır, gerçi li etiketi varsa gerek kalmaz zaten otomatik alt satıra iner-->
+        
+        <!--1-başka bir web sitesini aynı sayfada değil yeni sayfa açmak için target ve blank kullanılır-->
+        <a href="http://kodluyoruz.org" target="_blank">
+            kodluyoruz sayfasina gidilecek
+        </a>
+    </li>
+    <li><!--2-başka bir sayfaya gidebiliriz.
+        Kendi dizinim/klasörüm içerisinde yer alan bir başka sayfaya gitsin ama webe değil. Bir de yeni bir sayfada açsın bunu.(target kull.) Bunun için kendi klasörümüzde bir html dosyası oluşturuz ve onun adresini hrefe yazarız. Bu arada link verdiğimiz diğer html dosyasına gidip oradan geri dönmek için bir link vererek bu sayfaya geri dönebiliriz.-->
+        <a href="6gorsellerlecalismak.html" target="_blank">
+            Gorsellerle Calisma Sayfası
+        </a>
+    </li>
+    <li><!-- 3-ayni sayfa icinde bir yere gidebiliriz. ID ->Bilgisi uniq=yani benzersizdir. Buna ihtiyacımız var.Bunu sayfanın en altına gitmek için ya da mousela indiğimiz ya da çıktığımız kadar çok içerik olursa kullanırız.Yani çapa ancor ekleme denir.
+        -Önce bunun için  html dokumanında alt kısma iner ve bir paragraf etiketi oluştururuz.Buraya gitmesi için üstten link vereceğiz Bunun olması için altta oluşturduğumuz paragraf ve başlığa ait bir id olmalı.Alta ineriz ve link göndereceğimiz yere ait bir kod yazarız. örnek id=footer olsun; "ör:<h2 id="footer">En Alt Kısım</h2><p>Lorem ipsum dolor sit amet. </p>" yazarız. 
+        -Sonra yukarıya çıkarız ve burada yazdığımız kodda link verdiğimiz kısım içinde diyez işareti ile altta verdiğimiz id yi yazarız.Yani; "<a href="#footer">En Alt Kısma Git</a>" Ardından sayfayı save yapıp inceleyebiliriz -->
+        <a href="#footer">
+            En Alt Kısma Git
+        </a>
+    </li><!--4-mail at, Bu sefer kodluyoruz adresine mail atalım."<a href="">Kodluyoruz'a mail at</a> " Yazarız ve gidip kodluyoruz sitesinin iletişim sayfasında mail adresi bulup getirip href içerisine ekleriz"<a href="mailto:info@kodluyoruz.org">Kodluyoruz'a mail at</a> Böylelikle bilgisayarımızda hangi mail uygulaması varsa bu linke tıkladığımızda ondan mail gönder penceresi açılır.-->
+    <a href="mailto:info@kodluyoruz.org">Kodluyoruz'a Mail At</a>
+    <li><!--5-telefon et özelliği için tel: yazarsak telefondan açtığımızda direkt arama ekranına yönlendirir. Bilgisayardan tıkladığımızda ise arama özelliği olan bir uygulama varsa onu açar ör; face time. Yoksa bir uygulama seçin penceresi gelir.-->
+        <a href="tel:05050000000">Telefon Aç</a>
+    </li> <br>
+    <li style="list-style-type:none"><!--6-resme link ver özelliği için şu yapıyı kullanırız. Sayfamızda var olan bir resim var ve bu resim images klasörümüz içerisinde yer alıyor.Resim boş bir sayfada o linki açsın deriz.
+    ""-->
+        <a href="https://picsum.photos/" target="_blank">
+            <img src="images/1.jpg" alt="ornek bir resim">
+        </a>
+    </li>
+</ul>
+
+
+ 
+
+ 
+
+
+
+
+ <br><br><br><br>
+ What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+<br><br><br>
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+<br><br><br><br>
+Where does it come from?
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+<br><br><br><br>
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+<br><br><br><br>
+Where can I get some?
+There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+<br><br><br><br>
+	paragraphs
+	words
+	bytes
+	lists
+	Start with 'Lorem
+ipsum dolor sit amet...'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <h2 id="footer">En Alt Kısım</h2>
+ <p>
+Lorem ipsum dolor sit amet.
+ </p>
+ <br>
+ <a href="#ustegel"></a>
+   Yukarıya çık
+</p>
