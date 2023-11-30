@@ -1,0 +1,79 @@
+/* Baslik ortalanması1 standart kullanım 
+h1 {
+text-align: center;
+}
+*/
+
+
+sbody {
+    background-color:#F3E99F;
+    font-family: 'Roboto', sans-serif;;
+    }
+
+    /* Baslik ortalanması2  farklı ekranlara-cihazlara göre esnek kullanım*/
+.fs-32header{
+    display: flex; 
+    justify-content: center;
+    font-size: 32px;
+    color: #FF6D60;
+    }
+
+.fs-22section {
+    display: flex; 
+    justify-content: center;
+    font-size: 22px;
+    color: #98D8AA;
+    }
+
+.fs-18article {
+    display: flex; 
+    justify-content: center;
+    font-size: 18px;
+    color: #9c7911; 
+    }
+
+.fs-18left {
+        display: flex; 
+        justify-content: left;
+        font-size: 18px;
+        color: #9c7911; 
+        }
+
+.fs-10footer {
+    font-size: 10px;
+    color: #080808; 
+}
+
+/* nav startes */
+.fs-18nav {
+    display: flex; 
+    justify-content: center;
+    font-size: 18px;
+    }
+    .nav-ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li a {
+        display: block;
+        width: 80px;
+        padding: 8px 16px;
+    }
+    li a:hover {
+        background-color: #98D8AA;
+        color: white;
+    }
+    .aktif {
+        color: #FF6D60;
+    }
+/* nav end */
+
+.text-center {
+    display: flex; 
+    justify-content: center;
+}
+
+
+
+
